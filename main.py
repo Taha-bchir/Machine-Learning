@@ -48,3 +48,7 @@ def predict(candidat: Candidat):
     prediction = int(proba > 0.5)
     
     return {"probabilite_performance": round(proba*100, 2), "performant": prediction}
+
+@app.get("/")
+def home():
+    return {"message": "RH Predictor API - allez sur /docs pour tester"}
